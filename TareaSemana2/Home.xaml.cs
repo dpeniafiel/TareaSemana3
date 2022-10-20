@@ -24,5 +24,11 @@ namespace TareaSemana2
         {
             Navigation.PushAsync(new Nota(this.Usuario));
         }
+
+        private void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+            this.Usuario = "";
+        }
     }
 }

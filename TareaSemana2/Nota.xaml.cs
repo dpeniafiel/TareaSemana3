@@ -137,5 +137,11 @@ namespace TareaSemana2
             notaParcial2.Text = "";
             notaFinal.Text = "";
         }
+
+        private void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+            this.Usuario = "";
+        }
     }
 }

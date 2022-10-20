@@ -19,8 +19,8 @@ namespace TareaSemana2
 
         private void btnIngresar_Clicked(object sender, EventArgs e)
         {
-            String usuario = "dpeniafiel";
-            String clave = "123";
+            String usuario = "estudiante2022";
+            String clave = "uisrael2022";
             String usuarioIngresado = txtUsuario.Text;
             String claveIngresada = txtContrasena.Text;
 

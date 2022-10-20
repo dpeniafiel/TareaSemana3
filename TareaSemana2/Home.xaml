@@ -5,14 +5,29 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BackgroundColor="DodgerBlue" >
-                <Label TextColor="white" FontSize="24" Text="Menú de Navegación"></Label>
+                <Grid HeightRequest="80">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label TextColor="white" FontSize="32" Text="Menú de Navegación" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" ></Label>
+                    <Label Text="..." x:Name="usuarioLogeado" TextColor="Black" Grid.Column="2" Grid.Row="0" 
+                           FontAttributes="Bold" FontSize="16"
+                           />
+                    <Button Text="Salir" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="white"
+                            x:Name="btnSalir" Clicked="btnSalir_Clicked"></Button>
+                </Grid>
             </Frame>
-            <Label Text="Bienvenido al Sistema!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label x:Name="usuarioLogeado"/>
+            <Label Text="Bienvenido al Sistema!, para empezar selecciona un botón." FontSize="18"/>
 
-            <Button Text="Ingresar Calificaciones" x:Name="btnIngresarCalificaciones" Clicked="btnIngresarCalificaciones_Clicked"></Button>
+            <Button Text="Navegar a ingreso de calificaciones" x:Name="btnIngresarCalificaciones" Clicked="btnIngresarCalificaciones_Clicked"
+                    BackgroundColor="DeepPink" TextColor="White"
+                    ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
