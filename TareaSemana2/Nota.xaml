@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSemana2.Nota">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="DodgerBlue" >
+                    <Label TextColor="white" FontSize="24" Text="Ingreso de calificaciones"></Label>
+                </Frame>
+
+                <Label x:Name="usuarioLogeado"/>
+                <Frame OutlineColor="DodgerBlue" BackgroundColor="white" Margin="8" >
+                    <StackLayout>
+                        <Grid Padding="8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Primer Parcial" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+                            <Label Text="Tareas:" FontAttributes="Bold" FontSize="18" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"/>
+                            <Entry x:Name="notaTareas1" Placeholder="Nota Tareas (60%):" TextChanged="notaTareas1_TextChanged"
+                                   Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                            <Label Text="Examen:" FontAttributes="Bold" FontSize="18" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1"/>
+                            <Entry x:Name="notaExamen1" Placeholder="Nota Examen (40%):" TextChanged="notaExamen1_TextChanged"
+                                   Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btnCalcularPrimerParcial" TextColor="white"  BackgroundColor="DodgerBlue" Text="Calcular primer parcial" Clicked="btnCalcularPrimerParcial_Clicked"
+                                    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
+                            <Label Text="Nota Parcial 1: " TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                            <Label x:Name="notaParcial1" TextColor="DeepPink" FontSize="24" FontAttributes="Bold"  Text=""
+                                   Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="1"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+
+                <Frame OutlineColor="DodgerBlue" BackgroundColor="white" Margin="8" >
+                    <StackLayout>
+                        <Grid Padding="8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Segundo Parcial" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold"
+                                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+                            <Label Text="Tareas:" FontAttributes="Bold" FontSize="18" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"/>
+                            <Entry x:Name="notaTareas2" Placeholder="Nota Tareas (60%):" TextChanged="notaTareas2_TextChanged"
+                                   Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                            <Label Text="Examen:" FontAttributes="Bold" FontSize="18" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1"/>
+                            <Entry x:Name="notaExamen2" Placeholder="Nota Examen (40%):" TextChanged="notaExamen2_TextChanged"
+                                   Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btnCalcularSegundoParcial" Text="Calcular segundo parcial" TextColor="white"  BackgroundColor="DodgerBlue" Clicked="btnCalcularSegundoParcial_Clicked"
+                                    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
+                            <Label Text="Nota Parcial 2: " TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold"
+                                   Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                            <Label x:Name="notaParcial2" TextColor="DeepPink" FontSize="24" FontAttributes="Bold"  Text=""
+                                   Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="1"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+                <BoxView HeightRequest="24"></BoxView>
+
+                <Button x:Name="btnCalcularNotaFinal" Text="Calcular nota final" TextColor="white"  BackgroundColor="DeepPink" Clicked="btnCalcularNotaFinal_Clicked"></Button>
+                <Label Text="Nota Final: " TextColor="DeepPink" FontSize="24" FontAttributes="Bold"></Label>
+                <Label x:Name="notaFinal" TextColor="DeepPink" FontSize="24" FontAttributes="Bold"  Text=""></Label>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

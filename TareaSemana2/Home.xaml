@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSemana2.Home">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DodgerBlue" >
+                <Label TextColor="white" FontSize="24" Text="Menú de Navegación"></Label>
+            </Frame>
+            <Label Text="Bienvenido al Sistema!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="usuarioLogeado"/>
+
+            <Button Text="Ingresar Calificaciones" x:Name="btnIngresarCalificaciones" Clicked="btnIngresarCalificaciones_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
